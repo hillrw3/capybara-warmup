@@ -18,11 +18,8 @@ feature "Homepage" do
     fill_in "name", with: "Rob"
     fill_in "email", with: "rob@example.com"
     select "2", from: "number_of_guests"
-    # select "Fish", from: "dinner_choice"
     choose("Fish")
     click_on "RSVP"
     expect(page).to have_content("Thanks for RSVPing!")
   end
-
-
 end
